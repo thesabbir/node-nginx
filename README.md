@@ -13,7 +13,8 @@ $ cd node-nginx
 $ npm install -d
 $ ln -s /path/to/node-nginx.js /usr/local/bin/nodenginx
 ```
-
+  
+`note : please edit your 'config.json' file according to your nginx.conf directory`
 
 
 
@@ -46,4 +47,5 @@ $ node-nginx --help
 
 
 ```
+
 
