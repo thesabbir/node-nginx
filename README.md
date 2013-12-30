@@ -33,15 +33,13 @@ $ nodenginx  -n [domain] -p [port] -P [server-port]
 
 ###Example
 ```
-$ node-nginx -n example.com -p 8080 -P 80
+$ nodenginx -n example.com -p 8080 -P 80
 ```
 
 
 ###For help
-
 ```
-$ node-nginx --help
-
+$ nodenginx --help
 
 ```
 
