@@ -40,10 +40,10 @@ var nignxConf = [
 
 ].join(eol);
 
-if (program.enabled) status(enabled)
-if (program.available) status(available)
+if (program.enabled) status(enabled);
+if (program.available) status(available);
 
-if (program.name !== undefined & program.port !== undefined) {
+if (program.name !== undefined && program.port !== undefined) {
     filename = program.name;
     nignxConf = nignxConf.replace(new RegExp('{{domain}}', 'ig'), program.name);
     nignxConf = nignxConf.replace(new RegExp('{{port}}', 'ig'), program.port);
@@ -51,7 +51,7 @@ if (program.name !== undefined & program.port !== undefined) {
     main(filename, nignxConf);
 }
 
-function write (path, str) {
+function write(path, str) {
     fs.writeFile(path, str);
     console.log('Created SuccessFully');
     program.confirm('Do you want to enable this site ?', function (dec) {
@@ -63,7 +63,7 @@ function write (path, str) {
     });
 }
 
-function enable (filename) {
+function enable(filename) {
     fs.mkdirs(available);
     var src = p.join(available, filename) + ".conf",
         des = p.join(enabled, filename);
@@ -82,12 +82,12 @@ function enable (filename) {
         }
     })
 }
-function abort (msg) {
+function abort(msg) {
     console.log(msg);
     return process.exit(1);
 }
 
-function status (dirname) {
+function status(dirname) {
     fs.readdir(dirname, function (err, files) {
         if (files != undefined) {
             console.log(files.join(eol).replace(new RegExp('.conf', 'ig'), ''));
@@ -95,7 +95,7 @@ function status (dirname) {
     });
 }
 
-function help (add) {
+function help(add) {
     if (add != undefined) console.log(add);
     console.log('');
     console.log("Usage Example :");
@@ -105,7 +105,7 @@ function help (add) {
     console.log('');
 }
 
-function main (filename, str) {
+function main(filename, str) {
     var path = p.join(available, filename) + ".conf";
     fs.createFile(path, function (err) {
         if (err !== null) {
