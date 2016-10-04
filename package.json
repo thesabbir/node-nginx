@@ -1,10 +1,26 @@
 {
-  "name": "nginmixer",
+  "name": "nginmix",
   "description": "command line tool for nginx",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "preferGlobal": true,
+  "author": "Sabbir Ahmed",
+  "license": "MIT",
+  "main": "dist/nginmix",
+  "scripts": {
+    "test": "mocha \"./src/**/*.spec.js\" --compilers js:babel-core/register",
+    "start": "babel-node src/main.js",
+    "build": "babel src/main.js --out-file dist/nginmix.js"
+  },
   "dependencies": {
-    "fs-extra": "0.6.3",
-    "commander": "1.3.2"
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0",
+    "lodash": "^4.16.3",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
   }
 }
