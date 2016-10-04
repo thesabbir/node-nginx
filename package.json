@@ -5,11 +5,12 @@
   "preferGlobal": true,
   "author": "Sabbir Ahmed",
   "license": "MIT",
-  "main": "dist/nginmix",
+  "main": "dist/nginmix.js",
   "scripts": {
     "test": "mocha \"./src/**/*.spec.js\" --compilers js:babel-core/register",
     "start": "babel-node src/main.js",
-    "build": "babel src/main.js --out-file dist/nginmix.js"
+    "build": "babel src/main.js --out-file dist/nginmix.js",
+    "clean": "rm -rf dist/nginmix.js"
   },
   "dependencies": {
     "commander": "^2.9.0",
