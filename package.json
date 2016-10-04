@@ -1,9 +1,10 @@
 {
-    "name": "node-nginx",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "fs-extra" : "0.6.3",
-        "commander" : "1.3.2"
-    }
+  "name": "nginmixer",
+  "description": "command line tool for nginx",
+  "version": "1.0.0",
+  "preferGlobal": true,
+  "dependencies": {
+    "fs-extra": "0.6.3",
+    "commander": "1.3.2"
+  }
 }
